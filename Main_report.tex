@@ -1,0 +1,67 @@
+% This is a latex file for Journal Club report 
+
+
+% Author: Viswambhar Yasa
+\documentclass[a4paper,12pt,times]{article}
+
+% This are some packages used in bulding the report 
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{wrapfig, blindtext}
+\usepackage{index}
+\usepackage[intoc]{nomencl}
+\usepackage{subfig}
+\usepackage{matlab-prettifier}
+\usepackage{csvsimple}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{1}
+
+\def\myauthor{Viswambhar Reddy Yasa} % Author
+\def\matriculationno{65074} 
+\def\mytitle{Dislocation avalanches in plasticity}
+\def\mydate{\today} 
+
+%start  of the main documnt
+\begin{document}
+
+%This is calling out sub-latex file in our main latex file
+
+\input{TITLE_PAGE}
+
+\vfill
+%\pagebreak to move to next page
+\numberwithin{equation}{section}
+%this is the introduction section
+\input{Section_1}
+
+\numberwithin{equation}{section}
+%this is the section on dislocation avalanches
+\input{Section_2}
+
+\numberwithin{equation}{section}
+%this is the section on atomistic modelling on dislocations avalanches
+\input{Section_3}
+
+\numberwithin{equation}{section}
+%this is the section is a discussion on dislocations avalanches statistics.
+\input{Section_4}
+
+\newpage
+\bibliographystyle{abbrv}
+\bibliography{reference}
+
+
+\end{document}
